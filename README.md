@@ -79,6 +79,6 @@ int main()
 }
 ~~~
 
-![image-20230427153128349](doc\img\image-20230427153128349.png)
+![](https://raw.githubusercontent.com/2963663242/guardian_object/main/doc/img/image-20230427153128349.png)
 
 上图显示，虽然调用方已经析构了对象，但是由于convert还在执行所以没有立马执行析构函数，直到任务结束才执行析构函数
