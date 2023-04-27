@@ -25,6 +25,9 @@ private:
 		m_wPtr = wPtr;
 	}
 private:
+	Protector(){}
+private:
 	weak_ptr<T> m_wPtr;
+	friend T;
 };
  

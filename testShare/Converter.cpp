@@ -16,7 +16,7 @@ void Converter::convert()
 
 	thread obj([&,ptr]() {
 		
-		for (m_count = 0; m_count < 100; m_count++) {
+		for (m_count = 0; m_count < 20; m_count++) {
 			cout << m_count << endl;
 			this_thread::sleep_for(std::chrono::milliseconds(100));
 		}

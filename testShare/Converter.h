@@ -15,9 +15,6 @@ public:
 	Converter();
 private:
 	int m_count;
-	weak_ptr<Converter> m_wPtr;
-	
-	friend std::shared_ptr<IConverter> create();
 };
 
 
