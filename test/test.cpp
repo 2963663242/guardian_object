@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	{
-		MConverter converter = MConverter::create();
+		std::shared_ptr<IConverter> converter = create();
 		converter->convert();
 
 	};

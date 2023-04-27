@@ -7,24 +7,10 @@ IConverter::~IConverter()
 }
 
 
-
-std::shared_ptr<IConverter> MConverter::operator->()
+std::shared_ptr<IConverter> create()
 {
-	return m_ptr;
-}
-
-MConverter MConverter::create()
-{
-
 	Converter* converter = new Converter;
 	shared_ptr<Converter> sPtr(converter);
 	converter->setWearPointer(sPtr);
-	MConverter mc(sPtr);
-	return mc;
+	return sPtr;
 }
-
-MConverter::MConverter(std::shared_ptr<IConverter> ptr) :m_ptr(ptr)
-{
-
-}
-

@@ -17,16 +17,9 @@ public:
 
 template class DLLEXPORT std::shared_ptr<IConverter>;
 
-class DLLEXPORT  MConverter  {
-public:
-	std::shared_ptr<IConverter> operator->();
-public:
-	static MConverter create();
-private:
-	MConverter(std::shared_ptr<IConverter> ptr);
-	std::shared_ptr<IConverter> m_ptr;
-	 
-};
+
+
+std::shared_ptr<IConverter> DLLEXPORT create();
 
 
 

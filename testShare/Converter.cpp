@@ -30,9 +30,4 @@ void Converter::convert()
 
 
 
-//shared_ptr<Converter> create() {
-//	Converter* converter = new Converter;
-//	shared_ptr<Converter> sPtr(converter);
-//	converter->setWearPointer(sPtr);
-//	return sPtr;
-//}
+

@@ -17,10 +17,9 @@ private:
 private:
 	int m_count;
 	weak_ptr<Converter> m_wPtr;
-	//friend shared_ptr<Converter> create();
-	friend MConverter MConverter::create();
+	
+	friend std::shared_ptr<IConverter> create();
 };
 
 
-//shared_ptr<Converter> create();
 
