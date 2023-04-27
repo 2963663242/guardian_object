@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="Converter.h" />
     <ClInclude Include="IConverter.h" />
+    <ClInclude Include="Protecter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

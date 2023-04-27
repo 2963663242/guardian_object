@@ -10,14 +10,10 @@ Converter::~Converter()
 	cout << "Converter::~Converter()" << endl;
 }
 
-void Converter::setWearPointer(weak_ptr<Converter> wPtr)
-{
-	m_wPtr = wPtr;
-}
-
 void Converter::convert()
 {
-	shared_ptr<Converter> ptr = (shared_ptr<Converter>)m_wPtr;
+	shared_ptr<Converter> ptr = this->createGuarder();
+
 	thread obj([&,ptr]() {
 		
 		for (m_count = 0; m_count < 100; m_count++) {

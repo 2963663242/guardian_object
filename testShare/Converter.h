@@ -1,19 +1,18 @@
 #pragma once
-#include <memory>
+
+#include "Protecter.h"
 #include "IConverter.h"
 
-using namespace std;
 
 
 
-class Converter : public IConverter
+
+class Converter :public Protector<Converter> ,public IConverter
 {
 public:
 	virtual void convert();
 	virtual ~Converter();
-private:
 	Converter();
-	void setWearPointer(weak_ptr<Converter>);
 private:
 	int m_count;
 	weak_ptr<Converter> m_wPtr;
